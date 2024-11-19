@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mr. Behnami's English Class</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url("cr.jpg");
+            backdrop-filter: blur(8px);
+            height: 100%;
+        }
+        .poster {
+            background-color: #fff7d1;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            max-width: 800px;
+            transform: rotate(-2deg);
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: rotate(-2deg) translate(0, 0); }
+            50% { transform: rotate(-2deg) translate(0, -15px); }
+            100% { transform: rotate(-2deg) translate(0, 0); }
+        }
+        .sticky-note {
+            padding: 20px;
+            margin: 15px 0;
+            background: #ffeb3b;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+            transform: rotate(random(-5deg,5deg));
+            transition: all 0.3s ease;
+        }
+        h1 {
+            color: #ff6b6b;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            animation: rainbow 5s linear infinite;
+        }
+        @keyframes rainbow {
+            0% { color: #ff6b6b; }
+            25% { color: #4ecdc4; }
+            50% { color: #45b7d1; }
+            75% { color: #96ceb4; }
+            100% { color: #ff6b6b; }
+        }
+        .student-info {
+            position: absolute;
+            top: -20px;
+            right: -10px;
+            background: #ff9a9e;
+            padding: 10px 20px;
+            border-radius: 10px;
+            transform: rotate(5deg);
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+            animation: wiggle 2s ease-in-out infinite;
+        }
+        .teacher-info {
+            position: absolute;
+            bottom: -20px;
+            left: -10px;
+            background: #a1c4fd;
+            padding: 10px 20px;
+            border-radius: 10px;
+            transform: rotate(-3deg);
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+            animation: wiggle 2s ease-in-out infinite;
+        }
+        @keyframes wiggle {
+            0% { transform: rotate(-3deg); }
+            50% { transform: rotate(3deg); }
+            100% { transform: rotate(-3deg); }
+        }
+        .rules {
+            list-style-type: none;
+            padding: 0;
+        }
+        .rules li {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transform: rotate(random(-2deg,2deg));
+            position: relative;
+            overflow: hidden;
+        }
+        .rules li::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+        @keyframes shine {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+        .rules li:nth-child(odd) {
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+        }
+        .rules li:nth-child(even) {
+            background: linear-gradient(45deg, #a1c4fd, #c2e9fb);
+        }
+        .rules li:hover {
+            transform: scale(1.05) rotate(0deg);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        @media (max-width: 600px) {
+            .poster {
+                margin: 10px;
+                padding: 20px;
+            }
+            .rules li {
+                font-size: 1em;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <div class="student-info">✨ Student: Ali Safamanesh ✨</div>
+        <div class="teacher-info">🌟 Teacher: Mr. Behnami 🌟</div>
+        <h1>🎭 English Class Rules 🎨</h1>
+        <ul class="rules">
+            <li>🌟 Be on time and bring your happy face!</li>
+            <li>✋ Raise your hand before talking!</li>
+            <li>👂 Listen up! Your friends might say something awesome!</li>
+            <li>🧹 Keep it tidy - no paper airplane runways!</li>
+            <li>📝 Homework is like pizza - better delivered on time!</li>
+            <li>❤️ Be nice to everyone - we're all in this together!</li>
+        </ul>
+    </div>
+</body>
+</html>
